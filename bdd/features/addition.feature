@@ -16,3 +16,14 @@ Feature: addition
         Given i have two number -5 and -5
         When i add them
         Then i have the result as -10
+
+    Scenario Outline: add two integer
+        Given i have two number <a> and <b>
+        When i add them
+        Then i have the result as <result>
+
+    Examples:
+        |a|b|result|
+        |1|4|5|
+        |5|-5|0|
+        |800|110|910|
